@@ -1,9 +1,12 @@
 SampleApp32::Application.routes.draw do
-  root to: 'static_pages#home'
-  
+  get "users/new"
+    
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+  match '/signup',  to: 'users#new'
+  
+  root to: 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
